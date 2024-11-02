@@ -1,11 +1,11 @@
- # Simba The Cat
+ # Eren Doğan
  Kişisel portföyüme hoş geldiniz! Ben bir yazılım 
 geliştiricisiyim.
  ## Hakkımda
- Cloud computing ve teknoloji topluluklarında 
+ Yazılım Geliştirmeyi seviyorum.
 deneyimim var.
- ## Yetenekler- Cloud Computing- GitHub & Git- Microsoft Power Platform
+ ## Yetenekler- 
  ## İletişim
- [LinkedIn](https://www.linkedin.com/username) 
-veya [GitHub](https://github.com/username) 
+ [LinkedIn](https://www.linkedin.com/eren-doğan) 
+veya [GitHub](https://github.com/erendogan003) 
 üzerinden bana ulaşabilirsiniz.
