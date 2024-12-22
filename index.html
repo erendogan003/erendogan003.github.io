@@ -68,11 +68,76 @@ footer{
     padding-left: 20px;
     padding-bottom: 15px;
 }
+#mesaj{
+    border: solid 2px black;
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+    position:relative;
+    left: 45%;
+}
+#mesaj2{
+    text-align: left;
+    display:none;
+    border: solid 2px black;
+    padding: 20px;
+    color: black;
+    background-color: white;
+    height: 400px;
+    width: 600px;
+    position: relative;
+    left: 28%;
+}
+#aboutme2{
+    display: none;
+}
+#projects2{
+    display: none;
+}
+#abilities2{
+    display: none;
+}
+#contact2{
+    display: none;
+}
+#gonder{
+    text-align: center;
+    color: black;
+    border: solid 1px black;
+    width: 50px;
+}
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Portföyüm</title>
-    <link rel="stylesheet" href="ödev.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script> 
+        $(document).ready(function(){
+          $("#mesaj").click(function(){
+            $("#mesaj2").slideToggle("slow");
+          });
+        });
+        $(document).ready(function(){
+          $("#aboutme").click(function(){
+            $("#aboutme2").slideToggle("slow");
+          });
+        });
+        $(document).ready(function(){
+          $("#projects").click(function(){
+            $("#projects2").slideToggle("slow");
+          });
+        });
+        $(document).ready(function(){
+          $("#abilities").click(function(){
+            $("#abilities2").slideToggle("slow");
+          });
+        });
+        $(document).ready(function(){
+          $("#contact").click(function(){
+            $("#contact2").slideToggle("slow");
+          });
+        });       
+        </script>
 </head>
 <body>
 <header>
@@ -83,15 +148,29 @@ footer{
     <div id="ee">
 About Me        Projects        Abilities        Contact  
     </div>
+    <div id="mesaj">
+        Send Messages
+    </div>
+    <section id="mesaj2">
+        <h2>Send Messages</h2>
+        <p id="mail">E-mail</p>
+        <textarea name="email" id="mailtext"></textarea>
+        <p id="konu">Subject</p>
+        <textarea name="konu" id="konutext"></textarea>
+        <p id="msj"> Your Message</p>
+        <textarea name="msj" id="msjtext"></textarea><br><br>
+        <button type="submit">Send</button>
+
+    </section>
 </header>
 <main>
     <section id="hakkimda">
-        <h2>About Me</h2>
-        <p>Hey! I am Saul GOODMAN, I have become lawyer very late in my life but that is not going to stop me achiving my dreams.</p>
+        <h2 id="aboutme">About Me</h2>
+        <p id="aboutme2">Hey! I am Saul GOODMAN, I have become lawyer very late in my life but that is not going to stop me achiving my dreams.</p>
     </section>
     <section id="projeler">
-        <h2>Projects</h2>
-        <ul>
+        <h2 id="projects">Projects</h2>
+        <ul id="projects2">
             <li>
                 Project 1: Helping Elderly People                
             </li>
@@ -104,10 +183,10 @@ About Me        Projects        Abilities        Contact
         </ul>
     </section>
     <section id="Yetenekler">
-        <h2>
+        <h2 id="abilities">
             Abilities
         </h2>
-        <ul>
+        <ul id="abilities2">
             <li>
             Very talkative
             </li>
@@ -120,8 +199,8 @@ About Me        Projects        Abilities        Contact
         </ul>
     </section>
     <section id="iletişim">
-        <h2>Contact</h2>
-        <p>
+        <h2 id="contact">Contact</h2>
+        <p id="contact2">
             To Reach Me: <a href="">saulgoodman@gmail.com </a> <br> Tel: 505-503-4455
         </p>
     </section>
