@@ -69,6 +69,8 @@ footer{
     padding-bottom: 15px;
 }
 #mesaj{
+    background-color: white;
+    color: black;
     border: solid 2px black;
     padding: 5px;
     width: 100px;
@@ -138,6 +140,29 @@ footer{
           });
         });       
         </script>
+    <script>
+        $(function () {
+            $('#mesaj2').on('submit', function (e) {
+                e.preventDefault();
+                $.ajax({
+                    url: 'url',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        email: $('#email').val(),
+                        subject: $('#subject').val(),
+                        content: $('#message').val()
+                    }),
+                    success: function (response) {
+                        alert('Message sent successfully!');
+                    },
+                    error: function (error) {
+                        alert('An error occurred');
+                    }
+                });
+            });
+        });
+    </script>    
 </head>
 <body>
 <header>
@@ -151,17 +176,20 @@ About Me        Projects        Abilities        Contact
     <div id="mesaj">
         Send Messages
     </div>
-    <section id="mesaj2">
-        <h2>Send Messages</h2>
-        <p id="mail">E-mail</p>
-        <textarea name="email" id="mailtext"></textarea>
-        <p id="konu">Subject</p>
-        <textarea name="konu" id="konutext"></textarea>
-        <p id="msj"> Your Message</p>
-        <textarea name="msj" id="msjtext"></textarea><br><br>
+    <form id="mesaj2">
+        <label for="email">E-Mail:</label><br>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="subject">Subject:</label><br>
+        <input type="text" id="subject" name="subject" required>
+        <br><br>
+        <label for="message">Your Message:</label><br>
+        <textarea id="message" name="message" required></textarea>
+        <br><br>
         <button type="submit">Send</button>
+    </form>
 
-    </section>
+    <div id="responseMessage" style="margin-top:20px; color: green;"></div>
 </header>
 <main>
     <section id="hakkimda">
